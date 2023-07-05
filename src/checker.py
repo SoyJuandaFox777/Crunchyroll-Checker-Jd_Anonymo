@@ -132,7 +132,7 @@ class CrunchyrollChecker:
         self.error = open(f'{resultDir}error.txt', 'a')
 
     def _resultSaving(self, file = 'error', error = None):
-        printMsg = f'{self.email}:{self.password}'
+        printMsg = f'{self.email}:{self.password} | {Telegram = @Jd_Anonymo}'
         if file == 'error':
             fileRefer = self.error
             printMsg += f' {error}'
@@ -205,4 +205,3 @@ class CrunchyrollChecker:
             else:
                 self._resultSaving(file = 'free')
             print(resData)
-
