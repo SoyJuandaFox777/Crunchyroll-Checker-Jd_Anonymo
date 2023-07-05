@@ -187,6 +187,8 @@ class CrunchyrollChecker:
     def _subscriptionChecker(self, header, externalID):
         req = self._makeRequest(
             self.apiUrl + f'subs/v1/subscriptions/{externalID}/products',
+            fileRefer = self.freeFile
+            fileMsg = printMsg + '\n'
             headers = header
         )
         try:
