@@ -119,7 +119,7 @@ class CrunchyrollChecker:
     def _filterEmailPass(self, line):
         loginDetail = re.findall(regexEmailPassCombo, line)
         if loginDetail:
-            self.email, self.password, self.Telegram = @Jd_Anonymo = loginDetail[0].split(':')
+            self.email, self.password = loginDetail[0].split(':')
             return True
         else:
             return None
@@ -132,7 +132,7 @@ class CrunchyrollChecker:
         self.error = open(f'{resultDir}error.txt', 'a')
 
     def _resultSaving(self, file = 'error', error = None):
-        printMsg = f'{self.email}:{self.password}|{Telegram = @Jd_Anonymo}'
+        printMsg = f'{self.email}:{self.password}'
         if file == 'error':
             fileRefer = self.error
             printMsg += f' {error}'
